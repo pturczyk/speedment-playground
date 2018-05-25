@@ -1,0 +1,190 @@
+{
+  "config" : {
+    "speedmentVersion" : "Speedment:3.1.1",
+    "nameProtected" : false,
+    "expanded" : true,
+    "appId" : "e2ac680e-b39b-418a-b14e-83b24e1ec6a3",
+    "companyName" : "pturczyk",
+    "name" : "speed",
+    "packageLocation" : "src/main/java/",
+    "id" : "public",
+    "packageName" : "io.pturczyk.speed.generated",
+    "dbmses" : [
+      {
+        "nameProtected" : true,
+        "expanded" : true,
+        "port" : 5432,
+        "schemas" : [
+          {
+            "nameProtected" : true,
+            "expanded" : true,
+            "tables" : [
+              {
+                "nameProtected" : true,
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "a_id",
+                    "id" : "a_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "authors_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "a_id",
+                        "id" : "a_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "authors_pkey",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "a_id",
+                    "id" : "a_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "a_first_name",
+                    "id" : "a_first_name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "a_last_name",
+                    "id" : "a_last_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "authors",
+                "id" : "authors",
+                "enabled" : true
+              },
+              {
+                "nameProtected" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "postgres",
+                        "foreignSchemaName" : "public",
+                        "expanded" : true,
+                        "name" : "b_author_id",
+                        "foreignColumnName" : "a_id",
+                        "id" : "b_author_id",
+                        "foreignTableName" : "authors",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "books_b_author_id_fkey",
+                    "id" : "books_b_author_id_fkey",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "b_id",
+                    "id" : "b_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "books_pkey",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "b_id",
+                        "id" : "b_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "books_pkey",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "b_id",
+                    "id" : "b_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "b_title",
+                    "id" : "b_title",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "b_author_id",
+                    "id" : "b_author_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "books",
+                "id" : "books",
+                "enabled" : true
+              }
+            ],
+            "name" : "public",
+            "id" : "public",
+            "enabled" : true
+          }
+        ],
+        "typeName" : "PostgreSQL",
+        "ipAddress" : "127.0.0.1",
+        "name" : "postgres",
+        "id" : "postgres",
+        "enabled" : true,
+        "username" : "postgres"
+      }
+    ],
+    "enabled" : true
+  }
+}
